@@ -2,6 +2,10 @@
 the code takes a word as input, determines whether it is a palindrome, and returns a Boolean value
 """
 def is_palindrome(string):
+    string = string.lower().replace(' ', '')
+    symbols = ['/', '|', '\\', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '"', '_', '<', '>', '?', ',', '.', '[', ']', '{', '}', '`', '~', "'", ':', ';','…','“','”']
+    for i in range(len(symbols)):
+        string = string.replace(symbols[i], '')
     x = len(string)
     i = 0
     j = x - 1

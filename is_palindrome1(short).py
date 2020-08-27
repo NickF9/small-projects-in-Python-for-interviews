@@ -4,9 +4,14 @@ def reverse(text):
 def is_palindrome(text):
     return text == reverse(text)
 
-something = input('Input some palindrome: ')
+string = input('Input some palindrome: ')
 
-if (is_palindrome(something)):
+string = string.lower().replace(' ', '')
+symbols = ['/', '|', '\\', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '"', '_', '<', '>', '?', ',', '.', '[', ']', '{', '}', '`', '~', "'"]
+for i in range(len(symbols)):
+    string = string.replace(symbols[i], '')
+
+if (is_palindrome(string)):
     print('Yes, it\'s a palindrom!')
 else:
     print('No, it\'s not a palindrom!')
