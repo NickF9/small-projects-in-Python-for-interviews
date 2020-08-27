@@ -1,3 +1,7 @@
+"""
+the code counts the difference between any two angles (including: normal angles within 360 degrees, negative angles, and huge angles)
+"""
+
 def what_is_a_quarter(angel):
     # print('the received angel ' + str(angel) + ' deg')
     if 0 <= angel < 90:
